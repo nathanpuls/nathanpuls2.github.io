@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html style="font-size: 20px;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Slat.es2.8</title>
+<meta name="twitter:description" content="Share notes">
+<meta name="twitter:card" content="summary">
+<meta property="og:image" content="/assets/img/2%20slates%20copy.png?h=7ab81f13b05c00c83e887c4d0c53a308">
+<meta name="description" content="Share notes">
+<meta property="og:type" content="website">
+<meta name="twitter:image" content="/assets/img/2%20slates%20copy.png?h=7ab81f13b05c00c83e887c4d0c53a308">
+<meta name="twitter:title" content="Slat.es">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?h=82a0b39d2034f68a69e906cfe536579f">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?h=f405a313b4b59786bc56a5cd388f5ed3">
+<link rel="icon" type="image/png" sizes="180x180" href="/assets/img/ios%20homescreen-180x180.png?h=482fbb30ef9a8ed404af7be0df1e5606">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.png?h=b5ea7b7e1fc5fd8fd499077dd2072e51">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/img/android-chrome-512x512.png?h=c668981361a394a8f4a5a442584cb385">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.3/simplex/bootstrap.min.css">
+<link rel="manifest" href="/manifest.json?h=b89a687014a65d0953c5e01c6221fc54">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=9db842b3dc3336737559eb4abc0f1b3d">
+<link rel="stylesheet" href="/assets/css/styles.min.css?h=caf8db78b417e16370df0dab70edad29">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/3e8e522c72.js" crossorigin="anonymous"></script>
+<link rel="apple-touch-icon" href="https://www.slat.es/assets/img/ioshs.png">
+</head>
+<body class="text-center" style="background: #ffffff;">
+<nav class="navbar navbar-light navbar-expand-md text-center navigation-clean-search" id="form" style="text-align: center;width: 100%;">
+<div class="container"><a class="text-center d-xl-flex mr-auto" href="/">
+<h1 style="font-size: 30px;font-weight: 800;">SLAT.ES</h1>
+</a><a class="navbar-brand" href="#" title="hey" style="font-size: 14px;"></a>
+<form class="form-inline mr-auto" id="search-field-1" target="_self">
+<div class="form-group d-xl-flex justify-content-xl-end" style="border-width: 3px;border-style: none;"><label for="search-field"></label><center><input type="text" class="d-lg-flex justify-content-lg-right align-items-start border-dark shadow-none form-control" id="query" onkeyup="return forceLower(this);" style="width: 100% border-radius: 0px; font-family:Arial, FontAwesome" placeholder="&#xF002;" name="search" autofocus /></center>
+<script>
+    function forceLower(strInput) 
+{
+strInput.value=strInput.value.toLowerCase();
+}
+</script>
+<script>
+$(function() {
+        $('#query').on('keypress', function(e) {
+            if (e.which == 32){
+                console.log('Space Detected');
+                return false;
+            }
+        });
+});
+</script><script>
+    const f = document.getElementById('form');
+      const q = document.getElementById('query');
+      const google = '/#';
+      const site = '';
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = google + site + '' + q.value;
+        const win = window.open(url,'_self');
+        location.reload();
+
+          
+        
+      }
+
+      f.addEventListener('submit', submitted);
+    </script></div>
+</form>
+<div class="container"> <div class="thisurl">
+<center><h4 id="thisurl" style="color:black"></h4></center>
+<script>
+document.getElementById("thisurl").innerHTML = 
+window.location.hash;
+    
+</script>
+</div>
+<script>
+    var $temp = $("<input>");
+var $url = $(location).attr('href');
+    
+
+$('.clipboard').on('click', function() {
+  $("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $("sub").text("URL copied!");
+})
+</script></div>
+</div>
+</nav>
+<!doctype html>
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+<link rel="stylesheet" href="https://slat.es/s/codemirror.css" />
+
+<link rel="stylesheet" href="https://firepad.io/releases/v1.5.9/firepad.css" />
+<script src="https://firepad.io/releases/v1.5.9/firepad.min.js"></script>
+<style>
+      
+    html { height: 100%; }
+    body { margin: 0; height: 100%; position: relative; 
+    font-family: 'Open Sans', sans-serif;
+      }
+    
+      /* Height / width / positioning can be customized for your use case.
+         For demo purposes, we make firepad fill the entire browser. */
+    #firepad-container {
+      width: 90%;
+      height: 65%;
+      border: 1px solid #000;
+      margin: auto;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
