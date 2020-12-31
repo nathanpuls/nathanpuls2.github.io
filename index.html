@@ -1,12 +1,14 @@
-t5 
-
-<form>
-    <input id="projectid">
-    <input onclick="findProject()" type="text" value="Go">
-</form>
-
-<script>
-function findProject(){
-    document.location = 'https://wyr.es' + '/' + document.getElementById('projectId').value;
-}
+<!DOCTYPE html>
+<html>
+<script language="javascript" type="text/javascript">
+    function buttonClick(){
+    var url = document.getElementById("inputURL").value;
+    window.location = url;
+    }
 </script>
+<body>
+URL: <input type="text" id="inputURL" name="inputURL" value=""><br>
+<input type="button" value="click" OnClick="buttonClick()"/>
+</form>
+</body>
+</html>
