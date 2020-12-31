@@ -59,12 +59,11 @@ $(function() {
 </script><script>
     const f = document.getElementById('form');
       const q = document.getElementById('query');
-      const google = '/#';
-      const site = '';
+      const site = 'https://wyr.es/';
 
       function submitted(event) {
         event.preventDefault();
-        const url = google + site + '' + q.value;
+        const url = site + '' + q.value;
         const win = window.open(url,'_self');
         location.reload();
 
