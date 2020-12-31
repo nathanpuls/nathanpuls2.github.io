@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html>
 <script language="javascript" type="text/javascript">
@@ -8,9 +7,22 @@
     const url = site + slug;
     window.location = url;
     }
+    
+    document.onkeydown=function(){
+    if(window.event.keyCode=='13'){
+        submitForm();
+    }
+}
 </script>
+
+<script>
+
+</script>
+
 <body>
+<form id = "myFormID">
 wyr.es/ <input type="text" id="inputURL" name="inputURL" value="" autofocus>
-<input type="button" value="go" OnClick="buttonClick()"/>
+<input type="button" id="button" value="go" OnClick="buttonClick()"/>
+</form>
 </body>
 </html>
