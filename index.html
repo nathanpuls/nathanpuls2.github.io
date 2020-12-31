@@ -63,7 +63,7 @@ $(function() {
 
       function submitted(event) {
         event.preventDefault();
-        const url = site + '' + q.value;
+        const url = site + q.value;
         const win = window.open(url,'_self');
         location.reload();
 
